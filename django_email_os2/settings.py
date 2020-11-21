@@ -124,8 +124,8 @@ STATICFILES_DIRS=(
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
-CELERY_BROKER_URL= 'amqp://localhost'
-CELERY_BACKEND_URL= 'rpc://localhost'
+CELERY_BROKER_URL= 'redis://:p922c7c2bc1ce41db9af0312bedec98df1b8b0aca4fdaf9908e0669f4de51cc7b@ec2-52-54-199-169.compute-1.amazonaws.com:10069'
+CELERY_BACKEND_URL= 'rpc://:p922c7c2bc1ce41db9af0312bedec98df1b8b0aca4fdaf9908e0669f4de51cc7b@ec2-52-54-199-169.compute-1.amazonaws.com:10069'
 CELERY_ACCEPT_CONTENT= ['json']
 CELERY_TASK_SERIALIZER= 'json'
 
