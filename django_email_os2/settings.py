@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For thrward requests to web applications or frameworks written in the Python programming language. e full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -117,8 +117,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
+PROJECT_ROOT= os.path.join(os.path.abspath(__file__))
+STATIC_ROOT=os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+STATICFILES_DIRS=(
+    os.path.join(PROJECT_ROOT, 'static')
+)
 
 CELERY_BROKER_URL= 'amqp://localhost'
 CELERY_BACKEND_URL= 'rpc://localhost'
@@ -131,3 +135,4 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_HOST_USER= "cicakutyazebra@gmail.com"
 EMAIL_HOST_PASSWORD= "allatok123"
+
