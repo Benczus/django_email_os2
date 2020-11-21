@@ -25,7 +25,7 @@ SECRET_KEY = '^dm=^%v@p10h80u9q5(n$n^(&poomsfhg6_r#_$(quxiqao-h+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['whispering-temple-55682.herokuapp.com']
 
 
 # Application definition
